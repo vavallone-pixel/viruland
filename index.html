@@ -386,7 +386,7 @@
     <div class="product-card">
       <a href="cartera-gato.html" class="product-img-wrap">
         <span class="stock-tag tag-stock">En stock</span>
-        <img src="fotos/carteragato.jpg" alt="Cartera Tapestry Gatito Viruland"/>
+        <img src="fotos/carteragato.png" alt="Cartera Tapestry Gatito Viruland"/>
       </a>
       <div class="product-info">
         <div class="product-category">Cartera · Tejida a mano · Tapestry Crochet</div>
@@ -418,7 +418,7 @@
     <div class="product-card">
       <a href="alfombra.html" class="product-img-wrap">
         <span class="stock-tag tag-stock">En stock</span>
-        <img src="fotos/alfombra.png" alt="Alfombra Estrella Viruland"/>
+        <img src="fotos/Alfombra.png" alt="Alfombra Estrella Viruland"/>
       </a>
       <div class="product-info">
         <div class="product-category">Alfombra · Tejida a mano · Diseño Estrella</div>
@@ -464,9 +464,14 @@
 
     <!-- Picador -->
     <div class="product-card">
-      <div class="product-img-wrap" style="cursor:default">
+      <div class="product-img-wrap" onclick="openLightbox('fotos/epoxi-picador-rosa.png')" style="cursor:zoom-in">
         <span class="stock-tag tag-pedido">A pedido</span>
-        <img src="fotos/epoxi-picador-rosa.png" alt="Picador de Epoxi Viruland"/>
+        <img id="main-img-pic" src="fotos/epoxi-picador-rosa.png" alt="Picador de Epoxi Viruland"/>
+      </div>
+      <div class="thumb-strip">
+        <img src="fotos/epoxi-picador-rosa.png" class="active" onclick="switchImg('main-img-pic', this, 'fotos/epoxi-picador-rosa.png')" alt=""/>
+        <img src="fotos/epoxi-picadores.jpg" onclick="switchImg('main-img-pic', this, 'fotos/epoxi-picadores.jpg')" alt=""/>
+        <img src="fotos/epoxi-picadores2.jpg" onclick="switchImg('main-img-pic', this, 'fotos/epoxi-picadores2.jpg')" alt=""/>
       </div>
       <div class="product-info">
         <div class="product-category">Epoxi · A pedido</div>
@@ -500,7 +505,15 @@
 
     <!-- Porta Velas -->
     <div class="product-card">
-      <div class="product-info" style="padding-top:1.5rem">
+      <div class="product-img-wrap" onclick="openLightbox('fotos/epoxi-portavelas1.png')" style="cursor:zoom-in">
+        <span class="stock-tag tag-pedido">A pedido</span>
+        <img id="main-img-pv" src="fotos/epoxi-portavelas1.png" alt="Porta Velas de Epoxi Viruland"/>
+      </div>
+      <div class="thumb-strip">
+        <img src="fotos/epoxi-portavelas1.png" class="active" onclick="switchImg('main-img-pv', this, 'fotos/epoxi-portavelas1.png')" alt=""/>
+        <img src="fotos/epoxi-portavelas2.png" onclick="switchImg('main-img-pv', this, 'fotos/epoxi-portavelas2.png')" alt=""/>
+      </div>
+      <div class="product-info">
         <div class="product-category">Epoxi · A pedido</div>
         <div class="product-name">Porta Velas</div>
         <div class="product-price">Consultar precio</div>
@@ -512,7 +525,15 @@
 
     <!-- Porta Copa y Vinos -->
     <div class="product-card">
-      <div class="product-info" style="padding-top:1.5rem">
+      <div class="product-img-wrap" onclick="openLightbox('fotos/epoxi-portacopas1.jpg')" style="cursor:zoom-in">
+        <span class="stock-tag tag-pedido">A pedido</span>
+        <img id="main-img-pc2" src="fotos/epoxi-portacopas1.jpg" alt="Porta Copa y Vinos de Epoxi Viruland"/>
+      </div>
+      <div class="thumb-strip">
+        <img src="fotos/epoxi-portacopas1.jpg" class="active" onclick="switchImg('main-img-pc2', this, 'fotos/epoxi-portacopas1.jpg')" alt=""/>
+        <img src="fotos/epoxi-portacopas2.jpg" onclick="switchImg('main-img-pc2', this, 'fotos/epoxi-portacopas2.jpg')" alt=""/>
+      </div>
+      <div class="product-info">
         <div class="product-category">Epoxi · A pedido</div>
         <div class="product-name">Porta Copa y Vinos</div>
         <div class="product-price">Consultar precio</div>
@@ -524,7 +545,11 @@
 
     <!-- Porta Sahumerios -->
     <div class="product-card">
-      <div class="product-info" style="padding-top:1.5rem">
+      <div class="product-img-wrap" style="cursor:default">
+        <span class="stock-tag tag-pedido">A pedido</span>
+        <img src="fotos/epoxi-portasahumnerios.jpg" alt="Porta Sahumerios de Epoxi Viruland"/>
+      </div>
+      <div class="product-info">
         <div class="product-category">Epoxi · A pedido</div>
         <div class="product-name">Porta Sahumerios</div>
         <div class="product-price">Consultar precio</div>
