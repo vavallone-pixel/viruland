@@ -480,9 +480,13 @@
 
     <!-- Porta Celular -->
     <div class="product-card">
-      <div class="product-img-wrap" style="cursor:default">
+      <div class="product-img-wrap" onclick="openLightbox('fotos/epoxi-portacelular.png')" style="cursor:zoom-in">
         <span class="stock-tag tag-pedido">A pedido</span>
-        <img src="fotos/epoxi-portacelular.png" alt="Porta Celular de Epoxi Viruland"/>
+        <img id="main-img-pc" src="fotos/epoxi-portacelular.png" alt="Porta Celular de Epoxi Viruland"/>
+      </div>
+      <div class="thumb-strip">
+        <img src="fotos/epoxi-portacelular.png" class="active" onclick="switchImg('main-img-pc', this, 'fotos/epoxi-portacelular.png')" alt=""/>
+        <img src="fotos/epoxi-portacelular2.png" onclick="switchImg('main-img-pc', this, 'fotos/epoxi-portacelular2.png')" alt=""/>
       </div>
       <div class="product-info">
         <div class="product-category">Epoxi · A pedido</div>
