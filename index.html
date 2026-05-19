@@ -545,9 +545,13 @@
 
     <!-- Porta Sahumerios -->
     <div class="product-card">
-      <div class="product-img-wrap" style="cursor:default">
+      <div class="product-img-wrap" onclick="openLightbox('fotos/epoxi-portasahumnerios.jpg')" style="cursor:zoom-in">
         <span class="stock-tag tag-pedido">A pedido</span>
-        <img src="fotos/epoxi-portasahumnerios.jpg" alt="Porta Sahumerios de Epoxi Viruland"/>
+        <img id="main-img-ps" src="fotos/epoxi-portasahumnerios.jpg" alt="Porta Sahumerios de Epoxi Viruland"/>
+      </div>
+      <div class="thumb-strip">
+        <img src="fotos/epoxi-portasahumnerios.jpg" class="active" onclick="switchImg('main-img-ps', this, 'fotos/epoxi-portasahumnerios.jpg')" alt=""/>
+        <img src="fotos/epoxi-portasahumerios2.jpeg" onclick="switchImg('main-img-ps', this, 'fotos/epoxi-portasahumerios2.jpeg')" alt=""/>
       </div>
       <div class="product-info">
         <div class="product-category">Epoxi · A pedido</div>
@@ -561,7 +565,11 @@
 
     <!-- Apoya Vasos -->
     <div class="product-card">
-      <div class="product-info" style="padding-top:1.5rem">
+      <div class="product-img-wrap" style="cursor:default">
+        <span class="stock-tag tag-pedido">A pedido</span>
+        <img src="fotos/epoxi-posavasos.png" alt="Apoya Vasos de Epoxi Viruland"/>
+      </div>
+      <div class="product-info">
         <div class="product-category">Epoxi · A pedido</div>
         <div class="product-name">Apoya Vasos</div>
         <div class="product-price">Consultar precio</div>
@@ -573,7 +581,17 @@
 
     <!-- Llavero -->
     <div class="product-card">
-      <div class="product-info" style="padding-top:1.5rem">
+      <div class="product-img-wrap" onclick="openLightbox('fotos/epoxi-llavero1.jpeg')" style="cursor:zoom-in">
+        <span class="stock-tag tag-pedido">A pedido</span>
+        <img id="main-img-ll" src="fotos/epoxi-llavero1.jpeg" alt="Llavero de Epoxi Viruland"/>
+      </div>
+      <div class="thumb-strip">
+        <img src="fotos/epoxi-llavero1.jpeg" class="active" onclick="switchImg('main-img-ll', this, 'fotos/epoxi-llavero1.jpeg')" alt=""/>
+        <img src="fotos/epoxi-llaverosapedido.jpg" onclick="switchImg('main-img-ll', this, 'fotos/epoxi-llaverosapedido.jpg')" alt=""/>
+        <img src="fotos/epoxi-llaverosapedido1.jpg" onclick="switchImg('main-img-ll', this, 'fotos/epoxi-llaverosapedido1.jpg')" alt=""/>
+        <img src="fotos/epoxi-llaverosapedido2.jpg" onclick="switchImg('main-img-ll', this, 'fotos/epoxi-llaverosapedido2.jpg')" alt=""/>
+      </div>
+      <div class="product-info">
         <div class="product-category">Epoxi · A pedido</div>
         <div class="product-name">Llavero</div>
         <div class="product-price">Consultar precio</div>
@@ -601,9 +619,13 @@
 
     <!-- Imanes -->
     <div class="product-card">
-      <div class="product-img-wrap" style="cursor:default">
+      <div class="product-img-wrap" onclick="openLightbox('fotos/epoxi-imanes.jpg')" style="cursor:zoom-in">
         <span class="stock-tag tag-pedido">A pedido</span>
-        <img src="fotos/epoxi-imanes.jpg" alt="Imanes de Epoxi Viruland"/>
+        <img id="main-img-im" src="fotos/epoxi-imanes.jpg" alt="Imanes de Epoxi Viruland"/>
+      </div>
+      <div class="thumb-strip">
+        <img src="fotos/epoxi-imanes.jpg" class="active" onclick="switchImg('main-img-im', this, 'fotos/epoxi-imanes.jpg')" alt=""/>
+        <img src="fotos/epoxi-bandejadeimanes.png" onclick="switchImg('main-img-im', this, 'fotos/epoxi-bandejadeimanes.png')" alt=""/>
       </div>
       <div class="product-info">
         <div class="product-category">Epoxi · A pedido</div>
