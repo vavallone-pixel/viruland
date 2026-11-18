@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8"/>
@@ -98,7 +98,7 @@
   <script>
     const media = [
       { type: 'image', src: 'fotos/BandanaArg.png' },
-      { type: 'video', src: 'fotos/BandanaArgentina.mp4' },
+      { type: 'video', src: 'fotos/web/BandanaArgentina.mp4' },
     ];
     let current = 0;
 
@@ -108,10 +108,6 @@
       const main = document.getElementById('carousel-main');
       if (item.type === 'video') {
         main.innerHTML = `<video autoplay muted loop playsinline><source src="${item.src}" type="video/mp4"></video>`;
-        const vid = main.querySelector('video');
-        vid.addEventListener('loadedmetadata', () => {
-          if (vid.duration && isFinite(vid.duration)) vid.currentTime = vid.duration / 2;
-        });
       } else {
         main.innerHTML = `<img src="${item.src}" alt="Viruland"/>`;
       }

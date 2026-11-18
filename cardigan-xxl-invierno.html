@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8"/>
@@ -96,7 +96,7 @@
 
   <script>
     const media = [
-      { type: 'video', src: 'fotos/20260105_082520.mp4' },
+      { type: 'video', src: 'fotos/web/20260105_082520.mp4' },
     ];
     let current = 0;
 
@@ -105,11 +105,7 @@
       const item = media[i];
       const main = document.getElementById('carousel-main');
       if (item.type === 'video') {
-        main.innerHTML = `<video muted loop playsinline preload="metadata"><source src="${item.src}" type="video/mp4"></video>`;
-        const vid = main.querySelector('video');
-        vid.addEventListener('loadedmetadata', () => {
-          if (vid.duration && isFinite(vid.duration)) vid.currentTime = vid.duration / 2;
-        });
+        main.innerHTML = `<video muted loop playsinline preload="metadata" poster="${item.src.replace('.mp4', '.jpg')}"><source src="${item.src}" type="video/mp4"></video>`;
       } else {
         main.innerHTML = `<img src="${item.src}" alt="Viruland"/>`;
       }
