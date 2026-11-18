@@ -472,3 +472,156 @@ header .fade-up:nth-child(3) { animation-delay: 0.5s; }
   nav { gap: 1.2rem; }
   nav a { font-size: 0.65rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   LOOK SIMPLE (nov 2026) — blanco, editorial, la foto manda.
+   Sobrescribe los estilos de arriba. Para volver al look
+   anterior, borrá desde esta línea hasta el final.
+═══════════════════════════════════════════════════════════ */
+:root {
+  --ink: #111111;
+  --ink-soft: #555555;
+  --line: #eaeaea;
+  --paper: #ffffff;
+  --sand: #f4f1ec;
+  --lila: #d9cfe8;
+  /* variables viejas apuntando a la paleta nueva */
+  --dark: var(--paper); --dark2: var(--paper); --cream: var(--ink);
+  --gold: var(--ink); --gold-lt: var(--ink); --teal-glow: var(--ink-soft);
+}
+body { background: var(--paper); color: var(--ink); font-family: 'Playfair Display', Georgia, serif; font-weight: 400; }
+body::before { display: none; }
+
+/* Header + franja superior */
+header { background: var(--paper); border: none; padding: 0 2rem 1.6rem; }
+header::before {
+  content: 'Piezas únicas tejidas a mano en Buenos Aires · Cuotas en Mercado Libre · Consultas por WhatsApp';
+  display: block; margin: 0 -2rem 1.6rem; padding: .55rem 1rem;
+  background: var(--lila); color: var(--ink); font-size: .75rem;
+}
+.logo-deco, .tagline { display: none; }
+h1 {
+  font-family: 'Playfair Display', serif; font-weight: 500; text-transform: uppercase;
+  letter-spacing: .02em; font-size: clamp(2rem, 4.5vw, 3rem);
+  background: none; -webkit-text-fill-color: var(--ink); color: var(--ink);
+}
+
+/* Menú: en celular se desliza de costado en vez de cortarse */
+nav {
+  background: var(--paper); backdrop-filter: none; gap: 2rem;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  overflow-x: auto; justify-content: safe center; scrollbar-width: none;
+}
+nav::-webkit-scrollbar { display: none; }
+nav a { white-space: nowrap; text-transform: none; letter-spacing: 0; font-size: .95rem; color: var(--ink); }
+nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+
+/* Hero */
+.hero-band {
+  position: relative; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end;
+  min-height: 640px; padding: 0 3rem 3rem; text-align: left;
+  background: url('fotos/20250616_145725.jpg') center 72% / cover no-repeat;
+}
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.5), transparent 50%); }
+.hero-band h2, .hero-band .hero-cta { position: relative; z-index: 1; }
+.hero-band h2 {
+  font-family: 'Playfair Display', serif; font-weight: 400; color: #fff;
+  margin: 0 0 1.2rem; max-width: none; font-size: clamp(1.8rem, 3.6vw, 3rem); line-height: 1.15;
+}
+.hero-band h2 em { color: #fff; }
+.hero-cta {
+  background: #fff; color: var(--ink); border: none; border-radius: 0;
+  text-transform: none; letter-spacing: 0; font-size: 1rem; padding: .8rem 2rem;
+}
+.hero-cta:hover { background: var(--ink); color: #fff; }
+
+/* Títulos de sección */
+.section-title { padding: 4.5rem 2rem 1.2rem; }
+.section-title h2 { font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: 0; font-size: clamp(2rem, 4vw, 2.8rem); color: var(--ink); }
+.section-title .deco-row { display: none; }
+.pricing-note { text-transform: none; letter-spacing: 0; font-family: inherit; font-size: .85rem; color: var(--ink-soft); }
+.pricing-note span { color: var(--ink-soft); }
+
+/* Grilla de productos */
+.products { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2.5rem 1.25rem; padding: 1.5rem 2.5rem 2rem; }
+.product-card { background: var(--paper); }
+.product-img-wrap { background: var(--sand); }
+.product-img-wrap img, .product-img-wrap video { filter: none; }
+.product-card:hover .product-img-wrap img, .product-card:hover .product-img-wrap video { transform: none; filter: none; }
+.thumb-strip { background: var(--paper); padding: 6px 0; }
+.thumb-strip img.active, .thumb-strip img:hover { border-color: var(--ink); }
+.product-info { border-top: none; padding: .9rem 0 0; text-align: center; }
+.product-category, .card-detail-link { display: none; }
+.product-name { font-family: inherit; font-size: 1.05rem; color: var(--ink); margin-bottom: .2rem; }
+a.product-name:hover { color: var(--ink); text-decoration: underline; }
+.product-price { color: var(--ink); font-size: .95rem; letter-spacing: 0; }
+.product-actions { justify-content: center; }
+.btn {
+  font-family: inherit; text-transform: none; letter-spacing: 0; font-size: .9rem; font-weight: 400;
+  text-shadow: none; border-radius: 0; flex: 0 1 auto; padding: .6rem 1.6rem;
+}
+.btn-wa, .btn-ml { background: var(--ink); border: 1px solid var(--ink); color: #fff; }
+.btn-wa:hover, .btn-ml:hover { background: #fff; color: var(--ink); }
+.stock-tag { text-shadow: none; border: none; border-radius: 0; font-family: inherit; text-transform: none; letter-spacing: 0; font-size: .75rem; font-weight: 400; }
+.tag-stock { background: #fff; color: var(--ink); border: none; }
+.product-detail .tag-stock { border: 1px solid var(--ink); }
+.product-detail .stock-tag { padding: .3rem .8rem; }
+.tag-pedido { background: var(--ink); color: #fff; border: none; }
+.video-toggle-btn { background: #fff; border: none; color: var(--ink); opacity: .9; }
+.product-card:hover .video-toggle-btn, .video-toggle-btn:focus { background: #fff; }
+
+/* Ya tienen dueña */
+.sold-caption { font-family: inherit; color: var(--ink-soft); }
+.sold-strip img { filter: none; }
+.sold-arrow { background: #fff; color: var(--ink); border: 1px solid #ddd; }
+.sold-arrow:hover { background: #fff; border-color: var(--ink); }
+
+/* Sobre mí */
+.about { border: none; background: var(--sand); max-width: 1100px; }
+.about::before, .about::after { display: none; }
+.about p { font-family: inherit; color: #222; }
+.about-title, .wip-label { font-family: inherit; letter-spacing: 0; font-size: 1.8rem; color: var(--ink); }
+.about-photo-wrap { border: none; }
+.about-photo-wrap img, .wip-section img { filter: none; border: none; }
+.wip-section { border-top-color: #e2ddd5; }
+
+/* Contacto + footer */
+.contact-band { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.contact-band h2 { font-family: inherit; color: var(--ink); font-size: 2.2rem; }
+.contact-band p { font-family: inherit; font-style: normal; color: #444; }
+.contact-btn { border-radius: 0; text-transform: none; letter-spacing: 0; font-size: 1rem; }
+.contact-btn-wa { background: var(--ink); border: 1px solid var(--ink); color: #fff; }
+.contact-btn-wa:hover { background: #fff; color: var(--ink); }
+.contact-btn-ml { background: #fff; border: 1px solid var(--ink); color: var(--ink); }
+.contact-btn-ml:hover { background: var(--sand); }
+.web-offer { font-family: inherit; color: var(--ink-soft); }
+.web-offer a, .web-offer a:hover { color: var(--ink); border-color: var(--ink); }
+footer { color: var(--ink-soft); border-top: 1px solid var(--line); }
+footer .footer-logo { font-family: inherit; color: var(--ink); text-transform: uppercase; }
+
+/* Página de producto */
+.back-link { color: var(--ink-soft); text-transform: none; letter-spacing: 0; font-size: .9rem; }
+.back-link:hover { color: var(--ink); }
+.carousel-main { background: var(--sand); border: none; }
+.thumb-item { background: var(--sand); }
+.thumb-item.video-thumb { color: var(--ink); }
+.thumb-item:hover, .thumb-item.active { border-color: var(--ink); }
+.detail-name { font-family: inherit; font-weight: 400; color: var(--ink); }
+.detail-meta span { color: var(--ink-soft); text-shadow: none; text-transform: none; letter-spacing: 0; font-size: .85rem; font-weight: 400; }
+.detail-price { font-family: inherit; font-size: 1.6rem; color: var(--ink); }
+.detail-price-note { color: var(--ink-soft); text-transform: none; letter-spacing: 0; font-family: inherit; font-size: .8rem; }
+.detail-section { border-top-color: var(--line); }
+.detail-section h3 { font-family: inherit; text-transform: none; letter-spacing: 0; font-size: 1rem; font-weight: 400; color: var(--ink); }
+.detail-section h3::after { color: var(--ink-soft); }
+.detail-section p, .detail-section ul { font-family: inherit; font-size: .98rem; color: #333; }
+.detail-actions .btn { padding: .8rem 2rem; font-size: .95rem; }
+.lightbox-close { color: #fff; }
+
+@media (max-width: 600px) {
+  .hero-band { min-height: 480px; padding: 0 1.5rem 2rem; background-position: 30% 72%; }
+  .products { grid-template-columns: 1fr 1fr; padding: 1rem 1rem 2rem; gap: 1.5rem .75rem; }
+  .product-name { font-size: .95rem; }
+  .btn { padding: .55rem 1rem; font-size: .85rem; }
+  nav { gap: 1.25rem; justify-content: flex-start; padding: .9rem 1rem; }
+  nav a { font-size: .9rem; }
+}
